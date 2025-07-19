@@ -1,0 +1,90 @@
+body {
+  background: linear-gradient(135deg, maroon, #800000, #4d0000);
+  color: white;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+}
+.star {
+  position: fixed;
+  top: -10px;
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) translateX(50px);
+    opacity: 0;
+  }
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+.intro {
+  margin: 10px auto;
+  max-width: 400px;
+}
+
+#photo {
+  width: 80%;
+  max-width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  margin: 20px auto;
+  display: block;
+  transition: opacity 1s;
+   transition: opacity 1s ease;
+  opacity: 1;
+}
+.fade-out {
+  opacity: 0;
+}
+
+button {
+  margin: 10px;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  background-color: #ffcccc;
+  color: maroon;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:hover::after {
+  content: " 💖";
+}
+
+textarea {
+  width: 80%;
+  height: 80px;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.confetti, .heart {
+  position: fixed;
+  top: -10px;
+  font-size: 20px;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
